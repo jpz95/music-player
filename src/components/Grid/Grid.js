@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import GridRow from './GridRow';
+import GridRow from './grid-row';
 
 class Grid extends Component {
     constructor() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar/SearchBar';
-import Grid from './components/Grid/Grid';
+import Grid from './components/grid/grid';
 // import logo from './logo.svg';
 
 function App() {

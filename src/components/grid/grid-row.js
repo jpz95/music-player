@@ -4,7 +4,6 @@ class GridRow extends Component {
     render() {
         return (
             <div className="GridRow">
-                
             </div>
         );
     }
