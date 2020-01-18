@@ -11,7 +11,7 @@ function App() {
         <SearchBar></SearchBar>
       </header>
       <content className="App-content">
-        <Grid>{[ "row1,", "row2", "row3" ]}</Grid>
+        <Grid>{[ "cell1", "cell2", "cell3" ]}</Grid>
       </content>
     </div>
   );

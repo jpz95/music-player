@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class GridRow extends Component {
     render() {
         return (
-            <div className="GridRow">
+            <div className="grid__row">
             </div>
         );
     }

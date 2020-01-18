@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class GridHeader extends Component {
+class GridCell extends Component {
     render() {
         return (
-            <span>
+            <span className="grid__cell">
                 {}
             </span>
         );
     }
 }
 
-export default GridHeader;
+export default GridCell;
