@@ -1,26 +1,20 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import GridRow from './grid-row';
 
-class Grid extends Component {
-    constructor() {
-        super()
-        this.renderChildren = this.renderChildren.bind(this)
-        this.renderHeaderRow = this.renderHeaderRow.bind(this)
-        this.renderRows = this.renderRows.bind(this)
-    }
+function Grid(props) {
+    const [columnNames] = useState(props.children);
 
-    renderChildren() {
-        return this.renderHeaderRow(); //.concat(this.renderRows());
-    }
+    const render = () => {
+        return renderHeaderRow(); //.concat(this.renderRows());
+    };
 
-    renderHeaderRow() {
+    const renderHeaderRow = () => {
         return (
-            // TODO gridrow needs extra class name
-            <GridRow className="grid__header">{this.props.children}</GridRow>
+            <GridRow className={`grid__header`}> {columnNames} </GridRow>
         );
-    }
+    };
 
-    renderRows() {
+    /* const renderRows = () => {
         let children = React.Children.map(this.props.children, child => {
             console.log("making child", child)
             return (
@@ -29,15 +23,13 @@ class Grid extends Component {
         });
         console.log(children);
         return children;
-    }
+    }; */
 
-    render() {
-        return (
-            <div className="grid">
-                { this.renderChildren() }
-            </div>
-        );
-    }
-}
+    return (
+        <div className="grid">
+            { render() }
+        </div>
+    );
+};
 
 export default Grid;

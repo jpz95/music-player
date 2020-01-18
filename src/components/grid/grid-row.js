@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 
+const baseClass = "grid__row";
+
 class GridRow extends Component {
     render() {
+        const { className } = this.props;
+        const classes = `${baseClass} ${className}`;
+
         return (
-            <div className="grid__row">
-            </div>
+            <div className={classes}></div>
         );
     }
 }
