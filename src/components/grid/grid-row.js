@@ -1,16 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
+import GridCell from "./grid-cell";
 
 const baseClass = "grid__row";
 
-class GridRow extends Component {
-    render() {
-        const { className } = this.props;
-        const classes = `${baseClass} ${className}`;
+function GridRow(props) {
+    const renderCells = () => {
+        return React.Children.map(props.children, cellData => {
+            return (
+                <GridCell>{cellData}</GridCell>
+            );
+        });
+    };
 
-        return (
-            <div className={classes}></div>
-        );
-    }
-}
+    const classes = `${baseClass} ${props.className}`;
+    return (
+        <div className={classes}>
+            { renderCells() }
+        </div>
+    );
+};
 
 export default GridRow;

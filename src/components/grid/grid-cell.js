@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React /* { useState } */ from 'react';
 
-class GridCell extends Component {
-    render() {
-        return (
-            <span className="grid__cell">
-                {}
-            </span>
-        );
-    }
-}
+function GridCell(props) {
+    return (
+        <span className="grid__cell">
+            {props.children}
+        </span>
+    );
+};
 
 export default GridCell;

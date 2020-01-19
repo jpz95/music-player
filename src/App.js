@@ -11,7 +11,7 @@ function App() {
         <SearchBar></SearchBar>
       </header>
       <content className="App-content">
-        <Grid>{[ "cell1", "cell2", "cell3" ]}</Grid>
+        <Grid>{{ columnNames: [ "cell1", "cell2", "cell3" ] }}</Grid>
       </content>
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import GridRow from './grid-row';
 
 function Grid(props) {
-    const [columnNames] = useState(props.children);
+    const [columnNames] = useState(props.children.columnNames);
 
     const render = () => {
         return renderHeaderRow(); //.concat(this.renderRows());
@@ -10,7 +10,7 @@ function Grid(props) {
 
     const renderHeaderRow = () => {
         return (
-            <GridRow className={`grid__header`}> {columnNames} </GridRow>
+            <GridRow className={`-header`}>{columnNames}</GridRow>
         );
     };
 
