@@ -3,16 +3,16 @@ import GridCell from "./grid-cell";
 
 const baseClass = "grid__row";
 
-function GridRow(props) {
+function GridRow({ children = [], className = "" }) {
     const renderCells = () => {
-        return React.Children.map(props.children, cellData => {
+        return children.map(cellData => {
             return (
                 <GridCell>{cellData}</GridCell>
             );
         });
     };
 
-    const classes = `${baseClass} ${props.className}`;
+    const classes = className ? `${baseClass} ${className}` : baseClass;
     return (
         <div className={classes}>
             { renderCells() }
