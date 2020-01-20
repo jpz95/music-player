@@ -1,18 +1,18 @@
 import React from 'react';
 import './App.css';
-import SearchBar from './components/SearchBar/SearchBar';
+import SearchBar from './components/search-bar/search-bar';
 import Grid from './components/grid/grid';
 // import logo from './logo.svg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="app">
+      <header className="app__header">
         <SearchBar></SearchBar>
       </header>
-      <content className="App-content">
+      <div className="app__content">
         <Grid>{{ columnNames: [ "cell1", "cell2", "cell3" ] }}</Grid>
-      </content>
+      </div>
     </div>
   );
 }
