@@ -1,5 +1,4 @@
 import React from 'react';
-import './app.css';
 import SearchBar from './components/search-bar/search-bar';
 import Grid from './components/grid/grid';
 // import logo from './logo.svg';
