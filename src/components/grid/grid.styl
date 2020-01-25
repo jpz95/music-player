@@ -1,4 +1,14 @@
 .grid
     &__row
-        display: grid
-        grid-auto-flow: column
+        display grid
+        grid-auto-flow column
+        padding 2px
+        border-style solid
+        border-width 1px 0
+        border-color $primary-dark #1f4144
+
+        &.-selected
+            background-color $primary #4a6c6f
+
+    &__cell
+        padding 0 4px
