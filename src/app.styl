@@ -4,8 +4,8 @@
     grid-template-columns 1fr
     min-height 100vh
     font-size calc(10px + 2vmin)
-    background-color #282c34
-    color #eeeeee
+    background-color $color-gray-dark
+    color $color-font-light
 
 .app
 	&__header
@@ -14,7 +14,11 @@
 		align-items center
 		justify-content center
 		padding 8px
-		background-color rgb(0,0,0)
 
 	&__content
 		padding 8px
+
+		& .playlist__header
+			padding 8px
+			border-radius 4px
+			background-color $color-primary

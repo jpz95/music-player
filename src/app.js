@@ -10,6 +10,7 @@ function App() {
         <SearchBar></SearchBar>
       </header>
       <div className="app__content">
+        <div className="playlist__header">umpah umpah</div>
         <Grid>{{ columnNames: [ "cell1", "cell2", "cell3" ] }}</Grid>
       </div>
     </div>

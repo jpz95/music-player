@@ -2,13 +2,20 @@
     &__row
         display grid
         grid-auto-flow column
-        padding 2px
+        padding 0 2px 0 4px
+        border-width 1px 0 0 0
         border-style solid
-        border-width 1px 0
-        border-color $primary-dark #1f4144
+        border-color $color-transparent
+        border-left-width 1px
 
         &.-selected
-            background-color $primary #4a6c6f
+            border-left-color $color-accent3-coolBlue
+            border-left-width 3px
+            border-top-left-radius 3px
+            border-bottom-left-radius 3px
+
+        &:last-child
+            border-bottom-width 1px
 
     &__cell
         padding 0 4px
