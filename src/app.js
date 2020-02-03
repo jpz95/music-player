@@ -1,7 +1,6 @@
 import React from 'react';
 import SearchBar from './components/search-bar/search-bar';
 import Grid from './components/grid/grid';
-// import logo from './logo.svg';
 
 function App() {
   return (
