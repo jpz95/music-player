@@ -7,7 +7,7 @@ function GridRow({ children = [], className = "" }) {
     const renderCells = () => {
         return children.map(cellData => {
             return (
-                <GridCell>{cellData}</GridCell>
+                <GridCell key={cellData}>{cellData}</GridCell>
             );
         });
     };
