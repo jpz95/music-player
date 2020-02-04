@@ -6,7 +6,12 @@ const App = () => {
   const columns = [
     { label: "Song", field: "song" },
     { label: "Artist", field: "artist" },
-    { label: "Length", field: "length" }
+    { label: "Length", field: "length" },
+  ];
+
+  const data = [
+    { song: "song1", artist: "tu mama", length: "3:23", id: "hash1" },
+    { song: "song2", artist: "tu mama", length: "3:33", id: "hash2" },
   ];
 
   return (
@@ -18,7 +23,7 @@ const App = () => {
 
       <div className="app__content">
         <div className="playlist__header">umpah umpah</div>
-        <Grid columns={columns}></Grid>
+        <Grid columns={columns} data={data}></Grid>
       </div>
 
     </div>

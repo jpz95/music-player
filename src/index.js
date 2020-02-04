@@ -20,7 +20,10 @@ firebase.initializeApp(firebaseConfig);
 /* var db = firebase.firestore();
 db.collection('music').get().then(
     (querySnapshot) => {
-        const results = querySnapshot.docs.map(item => item.data());
+        const results = querySnapshot.docs.map(item => {
+            return Object.assign(item.data(), { id: item.id });
+        });
+        console.log(results);
         return results;
     }
 ); */

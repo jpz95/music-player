@@ -1,8 +1,9 @@
 import React from 'react';
+import GridRow from './grid-row';
 
-const Grid = ({ columns = [] }) => {
+const Grid = ({ columns = [], data = [] }) => {
     return (
-        <div className="grid">
+        <div className="grid d-grid gap-sm">
 
             <div className="grid__row -header">
                 {columns.map(({ label, field }) => (
@@ -12,6 +13,15 @@ const Grid = ({ columns = [] }) => {
                     >
                         {label}
                     </div>
+                ))}
+            </div>
+
+            <div className="d-grid gap-md">
+                {data.map(item => (
+                    // TODO handle for mobile view
+                    <GridRow key={`${item.id}`}
+                        data={item}
+                    ></GridRow>
                 ))}
             </div>
 
