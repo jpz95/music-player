@@ -3,7 +3,11 @@ import SearchBar from './components/search-bar/search-bar';
 import Grid from './components/grid/grid';
 
 const App = () => {
-  const columns = [ "cell1", "cell2", "cell3" ];
+  const columns = [
+    { label: "Song", field: "song" },
+    { label: "Artist", field: "artist" },
+    { label: "Length", field: "length" }
+  ];
 
   return (
     <div className="app">
