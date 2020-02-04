@@ -5,11 +5,12 @@ const Grid = ({ columns = [] }) => {
         <div className="grid">
 
             <div className="grid__row -header">
-                {columns.map(column => (
-                    <div key={`header-${column}`}
-                        className="grid__cell"
+                {columns.map(({ label, field }) => (
+
+                    <div className="grid__cell"
+                        key={`header-${field}`}
                     >
-                        {column}
+                        {label}
                     </div>
                 ))}
             </div>
