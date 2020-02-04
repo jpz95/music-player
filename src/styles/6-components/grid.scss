@@ -1,0 +1,36 @@
+.grid {
+    &__row {
+        display: grid;
+        grid-auto-flow: column;
+        padding: 0 2px 0 4px;
+        border-width: 1px 0 0 0;
+        border-style: solid;
+        border-color: $color-transparent;
+        border-left-width: 1px;
+
+        &.-selected {
+            border-left-color: $color-accent3-coolBlue;
+            border-left-width: 3px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 4px;
+        }
+
+        &:last-child {
+            border-bottom-width: 1px;
+        }
+
+        &.-header {
+            @include screen-x-small {
+                display: none;
+            }
+
+            @include screen-medium {
+                display: grid;
+            }
+        }
+    }
+
+    &__cell {
+        padding: 0 4px;
+    }
+}
