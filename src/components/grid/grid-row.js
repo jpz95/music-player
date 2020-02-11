@@ -3,7 +3,7 @@ import GridCell from "./grid-cell";
 
 const baseClass = "grid__row";
 
-function GridRow({ data = {}, className = "" } = {}) {
+const GridRow = ({ data = {}, className = "" }) => {
     const [cells] = useState(data);
     useEffect(() => {
         console.log("rendering columns", cells);
@@ -11,11 +11,10 @@ function GridRow({ data = {}, className = "" } = {}) {
 
     const renderCells = () => {
         // TODO handle for mobile view
-        return Object.keys(cells).map(key => {
+        return Object.entries(cells).map(([field, value]) => {
             // TODO check if field is displayed
-            const field = cells[key];
             return (
-                <GridCell key={`cell-${key}`}>{field}</GridCell>
+                <GridCell key={`cell-${field}`}>{value}</GridCell>
             );
         });
     };

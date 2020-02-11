@@ -1,13 +1,13 @@
 import React from 'react';
-import SearchBar from './components/search-bar/search-bar';
-import Grid from './components/grid/grid';
+import SearchBar from '@/components/search-bar/search-bar';
+import Grid from '@/components/grid/grid';
 
 const App = () => {
-  const columns = [
-    { label: "Song", field: "song" },
-    { label: "Artist", field: "artist" },
-    { label: "Length", field: "length" },
-  ];
+  const columns = {
+    song: { label: "Song" },
+    artist: { label: "Artist" },
+    length: { label: "Length" },
+  };
 
   const data = [
     { song: "song1", artist: "tu mama", length: "3:23", id: "hash1" },

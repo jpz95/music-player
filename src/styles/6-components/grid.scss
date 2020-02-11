@@ -1,7 +1,10 @@
 .grid {
+    overflow: auto;
+
     &__row {
         display: grid;
         grid-auto-flow: column;
+        grid-auto-columns: minmax(120px, 1fr);
         padding: 0 2px 0 4px;
         border-width: 1px 0 0 0;
         border-style: solid;
