@@ -1,6 +1,9 @@
 export default {
     getVisibleColumns(columns) {
-        return Object.entries(columns)
-            .filter(([, values]) => !values.hidden);
+        const visibleColumnsArr = Object.entries(columns)
+            .filter(([, values]) => !values.hidden)
+            .map(([field, ]) => field);
+
+            return new Set(visibleColumnsArr);
     }
 }
