@@ -3,26 +3,9 @@ import GridRow from './grid-row';
 import GridUtils from './grid-utils';
 
 const Grid = (props) => {
-    // TODO
-    // need to get column objects (field, label) that are visible
-    //   (how to update if visibility changes??)
-    // need to get set of columns that are visible
-    //  (can we convert to object defintion for columns then?) ex. {'song': { label: 'Song' }}
-    const [visibleColumns, ] = useState(GridUtils.getVisibleColumns(props.columns));
+    const { data, columns } = props;
 
-    const [columns, ] = useState(props.columns);
-
-    const [data, ] = useState(props.data);
-
-    // useEffect(() => {
-    //     (async () => {
-    //         const playlistData = await fetch();
-    //         setData(playlistData)
-    //     })()
-
-
-    //     // nvm just use re-base instead
-    // });
+    const [visibleColumns, ] = useState(GridUtils.getVisibleColumns(columns));
 
     const renderHeaderCells = () => {
         const visibleColumnsArr = Array.from(visibleColumns);
