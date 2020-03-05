@@ -11,9 +11,9 @@ const App = () => {
         <SearchBar></SearchBar>
       </header>
 
-      <div className="app__content">
+      <main className="app__content">
         <Playlist playlistName="greatest_playlist"></Playlist>
-      </div>
+      </main>
     </div>
   );
 }

@@ -23,9 +23,9 @@ const GridRow = (props) => {
 
   const classes = className ? `${baseClass} ${className}` : baseClass;
   return (
-    <div className={classes}>
+    <row className={classes}>
       { renderCells() }
-    </div>
+    </row>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SearchBar() {
+const SearchBar = () => {
   return (
     <div className="d-grid column gap-sm">
       <span>S</span>

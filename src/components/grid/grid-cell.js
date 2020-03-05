@@ -2,9 +2,9 @@ import React from 'react';
 
 function GridCell(props) {
   return (
-    <span className="grid__cell">
+    <cell className="grid__cell">
       {props.children}
-    </span>
+    </cell>
   );
 };
 

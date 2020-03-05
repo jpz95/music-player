@@ -12,21 +12,21 @@ const Grid = (props) => {
       const values = columns[field];
 
       return (
-        <div className="grid__cell" key={`header-${field}`}>
+        <cell className="grid__cell" key={`header-${field}`}>
           {values.label}
-        </div>
+        </cell>
       )
     });
   };
 
   return (
-    <div className="grid d-grid gap-sm">
+    <grid className="grid d-grid gap-sm">
 
-      <div className="grid__row -header">
+      <row className="grid__row -header">
         { renderHeaderCells() }
-      </div>
+      </row>
 
-      <div className="d-grid gap-md">
+      <section className="d-grid gap-md">
         {data.map(item => (
           // TODO handle for mobile view
           <GridRow key={`${item.id}`}
@@ -34,9 +34,9 @@ const Grid = (props) => {
             visibleColumns={visibleColumns}
           ></GridRow>
         ))}
-      </div>
+      </section>
 
-    </div>
+    </grid>
   );
 };
 

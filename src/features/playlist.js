@@ -24,13 +24,13 @@ const Playlist = (props) => {
   );
 
   return (
-    <div>
-      <div className="playlist__header">the greatest playlist :dab:</div>
+    <article className="playlist">
+      <header className="playlist__header">the greatest playlist :dab:</header>
       <Grid
         columns={columns}
         data={playlistSongs || []}
       ></Grid>
-    </div>
+    </article>
   );
 }
 
