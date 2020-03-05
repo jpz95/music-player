@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/main.scss';
+
 import App from './app';
+
+import './styles/main.scss';
+
 import * as serviceWorker from './serviceWorker';
+import initPreAppModule from '@/modules/pre-app';
+
+initPreAppModule();
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
