@@ -133,9 +133,6 @@ function getModules() {
   return {
     additionalModulePaths: additionalModulePaths,
     webpackAliases: getWebpackAliases(options),
-    srcAliases: {
-      '@': path.join(__dirname, '..', 'src')
-    },
     jestAliases: getJestAliases(options),
     hasTsConfig,
   };

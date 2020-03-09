@@ -1,9 +1,9 @@
 import React from 'react';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
-import Grid from '@/components/grid/grid';
+import Grid from 'components/grid/grid';
 
-import { firestore } from '@/base';
+import { firestore } from '../base';
 
 const Playlist = (props) => {
   const { playlistName } = props;
@@ -15,6 +15,7 @@ const Playlist = (props) => {
     length: { label: "Length" },
   };
 
+  // TODO create mock API call for firebase hooks
   const [playlistSongs, ] = useCollectionData(
     firestore
       .collection("playlists")

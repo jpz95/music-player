@@ -6,7 +6,7 @@ import App from './app';
 import './styles/main.scss';
 
 import * as serviceWorker from './serviceWorker';
-import initPreAppModule from '@/modules/pre-app';
+import initPreAppModule from 'modules/pre-app';
 
 initPreAppModule();
 

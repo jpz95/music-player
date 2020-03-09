@@ -1,5 +1,5 @@
-import { appConfig } from '@/constants/config';
-import { unrecognizedTagWarningRegex } from '@/constants/constants';
+import { appConfig } from 'constants/config';
+import { unrecognizedTagWarningRegex } from 'constants/constants';
 
 const init = () => {
   if (appConfig.suppressUnrecognizedTagWarning) {

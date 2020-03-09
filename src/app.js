@@ -1,7 +1,7 @@
 import React from 'react';
 
-import SearchBar from '@/components/search-bar/search-bar';
-import Playlist from './features/playlist';
+import SearchBar from 'components/search-bar/search-bar';
+import Playlist from 'features/playlist';
 
 const App = () => {
   return (
