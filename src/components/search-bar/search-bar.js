@@ -1,11 +1,12 @@
 import React from 'react';
 
+import { ReactComponent as SearchIcon } from 'svg/icon_search.svg';
+
 const SearchBar = () => {
   return (
     <div className="d-grid column gap-sm">
-      <span>S</span>
+      <SearchIcon fill="#ffffff" />
       <input className="flex-grow"></input>
-      <span>GO</span>
     </div>
   );
 };
