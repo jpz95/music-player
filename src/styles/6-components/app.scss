@@ -1,27 +1,30 @@
 .app {
+    // TODO use utility classes for some of these
     display: grid;
     grid-template-rows: auto 1fr;
     grid-template-columns: 1fr;
     min-height: 100vh;
     font-size: calc(10px + 2vmin);
     background-color: $color-gray-dark;
-	color: $color-font-light;
+    color: $color-font-light;
 
-	&__header {
-		display: grid;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: 8px;
-	}
+  &__header {
+    // TODO use/create utility classes for some of these
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    gap: 4px;
+  }
 
-	&__content {
-		padding: 8px;
+  &__content {
+    padding: 8px;
 
-		& .playlist__header {
-			padding: 8px;
-			border-radius: 4px;
-			background-color: $color-primary;
-		}
-	}
+    & .playlist__header {
+      padding: 8px;
+      border-radius: 4px;
+      background-color: $color-primary;
+    }
+  }
 }
