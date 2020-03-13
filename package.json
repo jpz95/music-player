@@ -52,7 +52,7 @@
     "sass-loader": "7.2.0",
     "semver": "6.3.0",
     "style-loader": "1.0.0",
-    "terser-webpack-plugin": "1.4.1",
+    "terser-webpack-plugin": "^1.4.3",
     "ts-pnp": "1.1.4",
     "url-loader": "2.1.0",
     "webpack": "4.41.0",
@@ -136,7 +136,7 @@
     ]
   },
   "devDependencies": {
-    "firebase": "^7.10.0",
+    "firebase": "^7.11.0",
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
     "react-firebase-hooks": "^2.1.1"
