@@ -6,3 +6,11 @@ input {
     border-color: #fff;
     border-style: solid;
 }
+
+button {
+    font-size: 0.6em;
+    padding: 4px 6px;
+    border-radius: 2px;
+    border: 1px solid $color-transparent;
+    color: $color-font-light;
+}
