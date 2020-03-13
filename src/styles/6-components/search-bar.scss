@@ -1,0 +1,26 @@
+.searchBar {
+  padding: 4px;
+  // TODO try to apply border radius with a class
+  border-radius: 4px;
+  background-color: $color-transparent;
+  border: 2px solid $color-primary;
+
+  &.focus {
+    // TODO decide on outline color
+    outline: #ddd auto 1px;
+    outline-offset: -2px;
+  }
+
+  & input {
+    // TODO decide if we need to move to general input defs
+    outline: none;
+    background: none;
+    border-color: $color-transparent;
+    caret-color: $color-font-light;
+    color: $color-font-light;
+  }
+}
+
+:focus {
+  outline-color: #ddd;
+}

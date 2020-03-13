@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { ReactComponent as SearchIcon } from 'images/icon_search.svg';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
+  const [isFocused, setFocus] = useState(props.isFocused || false);
+
+  const onInputFocus = (evt) => {
+    setFocus(true);
+  };
+
+  const onInputBlur = (evt) => {
+    setFocus(false);
+  };
+
+  const searchBarClasses = "searchBar d-flex"
+    + `${isFocused ? " focus" : ""}`;
+
   return (
-    <div className="d-grid column gap-sm">
+    <div className={searchBarClasses}>
+
       <SearchIcon fill="#ffffff" />
-      <input className="flex-grow"></input>
+      <input type="text"
+        onFocus={onInputFocus}
+        onBlur={onInputBlur}
+      />
     </div>
   );
 };
