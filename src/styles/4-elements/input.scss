@@ -14,3 +14,21 @@ button {
     border: 1px solid $color-transparent;
     color: $color-font-light;
 }
+
+// delete (or move??)
+.primary {
+    background-color: $color-primary;
+    border-color: $color-primary;
+}
+.secondary {
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+}
+.accent {
+    background-color: $color-accent;
+    border-color: $color-accent;
+}
+.test {
+    background-color: $color-test;
+    border-color: $color-test;
+}
