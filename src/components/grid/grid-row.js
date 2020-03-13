@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import GridCell from "./grid-cell";
 
 const baseClass = "grid__row";
@@ -7,9 +7,6 @@ const GridRow = (props) => {
   const { className, visibleColumns } = props;
 
   const [cells] = useState(props.data);
-  useEffect(() => {
-    console.log("rendering columns", cells);
-  });
 
   const renderCells = () => {
     // TODO handle for mobile view
