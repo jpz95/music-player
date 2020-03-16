@@ -1,0 +1,18 @@
+@mixin fontface($font-name, $fontface-path, $fontface-prefix, $type, $weight, $style) {
+  @font-face {
+    font-family: $font-name;
+    src: url('../../fonts/#{$fontface-path}/#{$fontface-prefix}-#{$type}.eot');
+    src: local('#{$font-name} #{$type}'),
+         local('#{$fontface-prefix}-#{$type}'),
+         url('../../fonts/#{$fontface-path}/#{$fontface-prefix}-#{$type}.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/#{$fontface-path}/#{$fontface-prefix}-#{$type}.woff2') format('woff2'),
+         url('../../fonts/#{$fontface-path}/#{$fontface-prefix}-#{$type}.woff') format('woff'),
+         url('../../fonts/#{$fontface-path}/#{$fontface-prefix}-#{$type}.ttf') format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin notosans-fontface($type, $weight, $style) {
+  @include fontface('Noto Sans', 'noto-sans', 'NotoSans', $type, $weight, $style)
+}
