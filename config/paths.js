@@ -43,6 +43,7 @@ const moduleFileExtensions = [
   'mjs',
   'web.js',
   'js',
+  // TODO remove TS setup
   'web.ts',
   'ts',
   'web.tsx',
@@ -75,6 +76,7 @@ module.exports = {
   appIndexJs: resolveModule(resolveApp, 'src/index'),
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
+  // TODO remove TS setup
   appTsConfig: resolveApp('tsconfig.json'),
   appJsConfig: resolveApp('jsconfig.json'),
   yarnLockFile: resolveApp('yarn.lock'),

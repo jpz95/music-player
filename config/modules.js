@@ -99,7 +99,7 @@ function getJestAliases(options = {}) {
 }
 
 function getModules() {
-  // Check if TypeScript is setup
+  // Check if TypeScript is setup // TODO remove TS setup
   const hasTsConfig = fs.existsSync(paths.appTsConfig);
   const hasJsConfig = fs.existsSync(paths.appJsConfig);
 
@@ -114,7 +114,7 @@ function getModules() {
   // If there's a tsconfig.json we assume it's a
   // TypeScript project and set up the config
   // based on tsconfig.json
-  if (hasTsConfig) {
+  if (hasTsConfig) { // TODO remove TS setup
     const ts = require(resolve.sync('typescript', {
       basedir: paths.appNodeModules,
     }));
@@ -134,6 +134,7 @@ function getModules() {
     additionalModulePaths: additionalModulePaths,
     webpackAliases: getWebpackAliases(options),
     jestAliases: getJestAliases(options),
+    // TODO remove TS setup
     hasTsConfig,
   };
 }

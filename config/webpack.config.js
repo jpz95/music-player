@@ -630,6 +630,7 @@ module.exports = function(webpackEnv) {
             new RegExp('/[^/?]+\\.[^/]+$'),
           ],
         }),
+      // TODO TS config and pnpTs+resolve+ForkTsCheckerWebpackPlugin dependencies
       // TypeScript type checking
       useTypeScript &&
         new ForkTsCheckerWebpackPlugin({
