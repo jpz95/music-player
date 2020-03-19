@@ -23,11 +23,11 @@
         }
 
         &.-header {
-            @include screen-x-small {
+            @include screen-xs {
                 display: none;
             }
 
-            @include screen-medium {
+            @include screen-md {
                 display: grid;
             }
         }

@@ -1,29 +1,43 @@
-@mixin screen-x-small {
-    /* smartphones, iPhone, portrait 480x320 phones */
-    @media (min-width: 20rem) { @content; }
+// smartphones, iPhone, portrait 480x320 phones
+@mixin screen-xs {
+    @media (min-width: 0rem) { @content; }
 }
 
-@mixin screen-small {
-    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+// portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.
+@mixin screen-sm {
     @media (min-width: 30.063rem) { @content; }
 }
 
-@mixin screen-medium {
-    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+// portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
+@mixin screen-md {
+    // hi hi hi
     @media (min-width: 40.063rem) { @content; }
 }
 
-@mixin screen-large {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
+// tablet, landscape iPad, lo-res laptops ands desktops
+@mixin screen-lg {
     @media (min-width: 60.063rem) { @content; }
 }
 
-@mixin screen-x-large {
-    /* big landscape tablets, laptops, and desktops */
-    @media (min-width: 64.063rem) { @content; }
+// hi-res laptops and desktops
+@mixin screen-xl {
+    @media (min-width: 80.063rem) { @content; }
 }
 
-@mixin screen-xx-large {
-    /* hi-res laptops and desktops */
-    @media (min-width: 80.063rem) { @content; }
+@mixin screen-size($size) {
+    @if $size == xs {
+        @include screen-xs { @content; }
+    }
+    @else if $size == sm {
+        @include screen-sm { @content; }
+    }
+    @else if $size == md {
+        @include screen-md { @content; }
+    }
+    @else if $size == lg {
+        @include screen-lg { @content; }
+    }
+    @else if $size == xl {
+        @include screen-xl { @content; }
+    }
 }
