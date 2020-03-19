@@ -5,6 +5,7 @@ import SongList from 'components/song-list/song-list';
 
 import { firestore } from '../base';
 
+// TODO rename as 'PlaylistView'
 const Playlist = (props) => {
   const { playlistName } = props;
 

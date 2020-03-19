@@ -1,20 +1,29 @@
 import React from 'react';
 
+// TODO rename as 'PlaylistItem'
 const SongListItem = (props) => {
   const { item } = props;
-  const { id, song, artist, length } = item;
+  const {
+    song,
+    artist,
+    length,
+    album,
+  } = item;
 
   return (
-    <li key={id} className="songListItem row">
-      <div className="col">
-        <div>{song}</div>
-        <div>{artist}</div>
+    <li className="songListItem row">
+      <div className="col col-11 col-10--lg">
+        <span>{song}</span>
+        <div>
+          <span>{artist}</span>
+          <strong> - </strong>
+          <span>{album}</span>
+        </div>
       </div>
 
-      {/* Show 'album', if size >=large */}
+      <div className="col col-hide--xs col-1--lg">{length}</div>
 
-      {/* Hide 'length', if size <large */}
-      <div className="col col-1">{length}</div>
+      {/* TODO create IconButton component */}
       <icon className="col col-auto">:</icon>
     </li>
   );

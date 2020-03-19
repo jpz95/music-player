@@ -1,0 +1,57 @@
+.container {
+  display: block;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  // TODO is 'flex: 1 1 100%;' better?
+  flex: 1;
+
+  $screen-sizes: xs, sm, md, lg, xl;
+  @each $size in $screen-sizes {
+
+    @include screen-size($size) {
+      &-hide--#{$size} {
+        display: none;
+      }
+    }
+  }
+
+  @function column-size($col-number) {
+    @return $col-number / 12 * 100%;
+  }
+
+  @mixin generate-column($size, $col-number) {
+    @include screen-size($size) {
+      &-#{$col-number}--#{$size} {
+        // TODO is 'flex: 0 0 column-size($col-number)' better?
+        flex: column-size($col-number);
+        display: initial;
+      }
+    }
+  }
+
+  @for $col-number from 1 through 12 {
+    &-#{$col-number} {
+      // TODO is 'flex: 0 0 column-size($col-number)' better?
+      flex: column-size($col-number);
+    }
+  }
+
+  @each $size in $screen-sizes {
+    @for $col-number from 1 through 12 {
+      @include generate-column($size, $col-number);
+    }
+  }
+
+  &-auto {
+    // TODO is 'flex: 0 auto;' better?
+    flex: none;
+  }
+}
+
+// TODO create alignment modifiers
