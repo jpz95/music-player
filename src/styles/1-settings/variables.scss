@@ -25,3 +25,4 @@ $color-transparent: rgba(0,0,0,0);
 $color-font-light: #eeeeee;
 
 $font-size: calc(1rem + 2vmin);
+$font-size-sm: calc(#{$font-size} - 0.30em);
