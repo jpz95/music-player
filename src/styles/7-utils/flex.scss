@@ -1,0 +1,10 @@
+.d-flex {
+    display: flex;
+}
+
+@include flex-alignment("align", align-items);
+@include flex-alignment("alignSelf", align-self);
+@include flex-alignment("alignContent", align-content);
+
+@include flex-alignment("justify", justify-content);
+@include flex-alignment("justifySelf", justify-self);

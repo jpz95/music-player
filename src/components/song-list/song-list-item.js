@@ -11,7 +11,7 @@ const SongListItem = (props) => {
   } = item;
 
   return (
-    <li className="songListItem row">
+    <li className="songListItem row align--center">
       <div className="col col-11 col-10--lg">
         <span>{song}</span>
         <div>
