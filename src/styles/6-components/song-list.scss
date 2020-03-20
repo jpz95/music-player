@@ -1,3 +1,9 @@
 .songList {
   padding: 0 8px;
+
+  @include screen-md() {
+    &Item__length {
+      display: flex;
+    }
+  }
 }

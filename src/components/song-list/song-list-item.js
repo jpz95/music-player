@@ -11,17 +11,29 @@ const SongListItem = (props) => {
   } = item;
 
   return (
-    <li className="songListItem row align--center">
-      <div className="col col-11 col-10--lg">
+    <li
+      className="songListItem
+        row
+        noWrap
+        align--center"
+    >
+      <div className="col-11 col-10--md">
         <span>{song}</span>
-        <div>
-          <span>{artist}</span>
-          <strong> - </strong>
-          <span>{album}</span>
+        <div className="d-flex align--center">
+          <small>{artist}</small>
+          <strong>-</strong>
+          <small>{album}</small>
         </div>
       </div>
 
-      <div className="col col-hide--xs col-1--lg">{length}</div>
+      <div
+        className="songListItem__length
+          justify--center
+          col-hide--xs
+          col-1--md"
+      >
+        {length}
+      </div>
 
       {/* TODO create IconButton component */}
       <icon className="col col-auto">:</icon>
