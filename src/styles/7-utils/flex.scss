@@ -2,6 +2,10 @@
     display: flex;
 }
 
+.noWrap {
+  flex-wrap: nowrap;
+}
+
 @include flex-alignment("align", align-items);
 @include flex-alignment("alignSelf", align-self);
 @include flex-alignment("alignContent", align-content);
