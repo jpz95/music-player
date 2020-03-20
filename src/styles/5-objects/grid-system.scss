@@ -5,22 +5,10 @@
 
 .row {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .col {
-  // TODO is 'flex: 1 1 100%;' better?
-  flex: 1;
-
-  $screen-sizes: xs, sm, md, lg, xl;
-  @each $size in $screen-sizes {
-
-    @include screen-size($size) {
-      &-hide--#{$size} {
-        display: none;
-      }
-    }
-  }
-
   @function column-size($col-number) {
     @return $col-number / 12 * 100%;
   }
@@ -31,6 +19,19 @@
         // TODO is 'flex: 0 0 column-size($col-number)' better?
         flex: column-size($col-number);
         display: initial;
+      }
+    }
+  }
+
+  // TODO is 'flex: 1 1 100%;' better?
+  flex: 1;
+
+  $screen-sizes: xs, sm, md, lg, xl;
+  @each $size in $screen-sizes {
+
+    @include screen-size($size) {
+      &-hide--#{$size} {
+        display: none;
       }
     }
   }
@@ -48,6 +49,7 @@
     }
   }
 
+  // TODO add 'auto' def for all columns/sizes
   &-auto {
     // TODO is 'flex: 0 auto;' better?
     flex: none;
