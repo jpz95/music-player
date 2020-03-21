@@ -1,0 +1,27 @@
+
+
+.p {
+  $directions: (
+    "a": [padding-top padding-right padding-bottom padding-left],
+    "t": [padding-top],
+    "b": [padding-bottom],
+    "l": [padding-left],
+    "r": [padding-right],
+    "tb": [padding-top padding-right],
+    "lr": [padding-left padding-right],
+  );
+
+  @mixin generate-padding($direction, $size, $properties, $value) {
+    &-#{$direction}--#{$size} {
+      @each $property in $properties {
+        #{$property}: $value
+      }
+    }
+  }
+
+  @each $direction, $properties in $directions {
+    @each $size, $value in $sizes {
+      @include generate-padding($direction, $size, $properties, $value);
+    }
+  }
+}
