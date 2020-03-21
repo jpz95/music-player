@@ -1,7 +1,7 @@
 @use "sass:map";
 
 @mixin flex-alignment($alignment-type, $alignment-property) {
-  $alignments: (
+  $alignment-map: (
     "center": center,
     "start": flex-start,
     "end": flex-end,
@@ -16,11 +16,11 @@
       "spaceEvenly": space-evenly,
     );
 
-    $alignments: map-merge($alignments, $extra-alignments);
+    $alignment-map: map-merge($alignment-map, $extra-alignments);
   }
 
   // ex. `.align--start { align-items: flex-start }`
-  @each $modifier, $value in $alignments {
+  @each $modifier, $value in $alignment-map {
     .#{$alignment-type}--#{$modifier} {
       #{$alignment-property}: $value;
     }
