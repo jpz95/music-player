@@ -19,11 +19,11 @@ const SongListItem = (props) => {
     >
       <div className="col-11 col-10--md">
         <span>{song}</span>
-        <div className="d-flex align--center">
-          <small>{artist}</small>
-          <strong>-</strong>
-          <small>{album}</small>
-        </div>
+        <small className="d-flex align--center">
+          <span>{artist}</span>
+          <strong className="p-lr--sm">&#8226;</strong>
+          <span>{album}</span>
+        </small>
       </div>
 
       <div
