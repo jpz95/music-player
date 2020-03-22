@@ -1,7 +1,6 @@
 import React from 'react';
 
-// TODO rename as 'PlaylistItem'
-const SongListItem = (props) => {
+const PlaylistItem = (props) => {
   const { item } = props;
   const {
     song,
@@ -12,13 +11,14 @@ const SongListItem = (props) => {
 
   return (
     <li
-      className="songListItem
+      className="playlistItem
         row
         noWrap
         align--center"
     >
       <div className="col-11 col-10--md">
         <span>{song}</span>
+
         <small className="d-flex align--center">
           <span>{artist}</span>
           <strong className="p-lr--sm">&#8226;</strong>
@@ -27,7 +27,7 @@ const SongListItem = (props) => {
       </div>
 
       <div
-        className="songListItem__length
+        className="playlistItem__length
           justify--center
           col-hide--xs
           col-1--md"
@@ -41,4 +41,4 @@ const SongListItem = (props) => {
   );
 };
 
-export default SongListItem;
+export default PlaylistItem;

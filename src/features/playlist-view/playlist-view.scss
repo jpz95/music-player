@@ -1,0 +1,7 @@
+.playlistView {
+  &__header {
+    // TODO maybe default all 'header' tags border-radius
+    border-radius: 4px;
+    background-color: $color-primary;
+  }
+}

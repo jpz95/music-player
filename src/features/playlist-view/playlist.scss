@@ -1,6 +1,4 @@
-.songList {
-  padding: 0 8px;
-
+.playlist {
   @include screen-md() {
     &Item__length {
       display: flex;

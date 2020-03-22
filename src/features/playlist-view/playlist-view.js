@@ -1,12 +1,12 @@
 import React from 'react';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
-import SongList from 'components/song-list/song-list';
+import Playlist from './playlist';
+import './playlist-view.scss';
 
-import { firestore } from '../base';
+import { firestore } from 'base.js';
 
-// TODO rename as 'PlaylistView'
-const Playlist = (props) => {
+const PlaylistView = (props) => {
   const { playlistName } = props;
 
   // TODO create mock API call for firebase hooks
@@ -19,11 +19,11 @@ const Playlist = (props) => {
   );
 
   return (
-    <article className="playlist">
-      <header className="playlist__header">the greatest playlist :dab:</header>
-      <SongList songs={playlistSongs || []}></SongList>
+    <article className="playlistView">
+      <header className="playlistView__header p-a--sm">the greatest playlist :dab:</header>
+      <Playlist songs={playlistSongs || []}></Playlist>
     </article>
   );
 }
 
-export default Playlist;
+export default PlaylistView;
