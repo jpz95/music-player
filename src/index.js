@@ -22,8 +22,6 @@ import 'fonts/noto-sans/noto-sans-bold-italic.ttf';
 import 'fonts/noto-sans/noto-sans-bold-italic.woff';
 import 'fonts/noto-sans/noto-sans-bold-italic.woff2';
 
-import 'styles/main.scss';
-
 import * as serviceWorker from './serviceWorker';
 import initPreAppModule from 'modules/pre-app';
 
