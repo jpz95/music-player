@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import SearchBar from 'components/search-bar/search-bar';
-import Playlist from 'features/playlist';
+import PlaylistView from 'features/playlist-view/playlist-view';
 
 const Router = () => {
   return (
@@ -21,7 +21,7 @@ const Router = () => {
         <BrowserRouter>
           <Switch>
             <Route exact path="/">
-              <Playlist playlistName="greatest_playlist" />
+              <PlaylistView playlistName="greatest_playlist" />
             </Route>
             <Route path="/">
               <Redirect to="/" />
