@@ -1,0 +1,28 @@
+@use "sass:map";
+
+@mixin flex-alignment($alignment-type, $alignment-property) {
+  $alignment-map: (
+    "center": center,
+    "start": flex-start,
+    "end": flex-end,
+    "stretch": stretch,
+    "baseline": baseline,
+  );
+
+  @if $alignment-type == "alignContent" {
+    $extra-alignments: (
+      "spaceAround": space-around,
+      "spaceBetween": space-between,
+      "spaceEvenly": space-evenly,
+    );
+
+    $alignment-map: map-merge($alignment-map, $extra-alignments);
+  }
+
+  // ex. `.align--start { align-items: flex-start }`
+  @each $modifier, $value in $alignment-map {
+    .#{$alignment-type}--#{$modifier} {
+      #{$alignment-property}: $value;
+    }
+  }
+}

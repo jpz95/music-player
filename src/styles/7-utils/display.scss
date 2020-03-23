@@ -2,7 +2,7 @@
     display: grid;
     align-items: center;
 
-    &.column {
+    &__flow--column {
         grid-auto-flow: column;
     }
 }
@@ -17,8 +17,4 @@
 
 .gap-lg {
     gap: 1rem;
-}
-
-.d-flex {
-    display: flex;
 }

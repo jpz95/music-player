@@ -1,0 +1,7 @@
+.playlist {
+  @include screen-md() {
+    &Item__length {
+      display: flex;
+    }
+  }
+}

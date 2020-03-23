@@ -1,8 +1,13 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom';
 
 import SearchBar from 'components/search-bar/search-bar';
-import Playlist from 'features/playlist';
+import PlaylistView from 'features/playlist-view/playlist-view';
 
 const Router = () => {
   return (
@@ -19,9 +24,12 @@ const Router = () => {
       <main className="app__content">
         <BrowserRouter>
           <Switch>
-            <Route exact path="/" render={() =>
-              <Playlist playlistName="greatest_playlist"></Playlist>
-            }></Route>
+            <Route exact path="/">
+              <PlaylistView playlistName="greatest_playlist" />
+            </Route>
+            <Route path="/">
+              <Redirect to="/" />
+            </Route>
           </Switch>
         </BrowserRouter>
       </main>
