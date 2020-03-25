@@ -15,10 +15,6 @@ const Router = () => {
 
       <header className="app__header">
         <SearchBar></SearchBar>
-        <button className="primary">Click</button>
-        <button className="secondary">Click</button>
-        <button className="accent">Click</button>
-        <button className="test">Click</button>
       </header>
 
       <main className="app__content">

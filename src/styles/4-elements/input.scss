@@ -10,13 +10,13 @@ input {
 // TODO move to form.scss
 button {
     font-size: 0.6em;
-    padding: 4px 6px;
+    padding: $spacing-xs $spacing-sm;
     border-radius: 2px;
     border: 1px solid $color-transparent;
     color: $color-font-light;
 }
 
-// delete (or move??)
+// TODO move to colors utilty module
 .primary {
     background-color: $color-primary;
     border-color: $color-primary;
@@ -26,10 +26,6 @@ button {
     border-color: $color-secondary;
 }
 .accent {
-    background-color: $color-accent;
-    border-color: $color-accent;
-}
-.test {
-    background-color: $color-test;
-    border-color: $color-test;
+    background-color: $color-tertiary;
+    border-color: $color-tertiary;
 }
