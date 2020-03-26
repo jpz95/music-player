@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Router from 'components/router/router';
-
 // Load fonts into bundle
 // TODO move into 'font-loader' module
 import 'fonts/noto-sans/noto-sans-regular.eot';
@@ -24,6 +22,11 @@ import 'fonts/noto-sans/noto-sans-bold-italic.woff2';
 
 import * as serviceWorker from './serviceWorker';
 import initPreAppModule from 'modules/pre-app';
+
+// Load global styles
+import 'styles/main.scss';
+
+import Router from 'components/router/router';
 
 initPreAppModule();
 

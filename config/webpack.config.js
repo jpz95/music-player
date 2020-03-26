@@ -485,7 +485,8 @@ module.exports = function(webpackEnv) {
                     name: 'sass-resources-loader',
                     options: {
                       resources: [
-                        path.join(paths.appSrc, '/styles/main.scss'),
+                        path.join(paths.appSrc, '/styles/1-settings/1-settings.scss'),
+                        path.join(paths.appSrc, '/styles/2-tools/2-tools.scss'),
                       ],
                     },
                   },
@@ -517,7 +518,8 @@ module.exports = function(webpackEnv) {
                     name: 'sass-resources-loader',
                     options: {
                       resources: [
-                        path.join(paths.appSrc, '/styles/main.scss'),
+                        path.join(paths.appSrc, '/styles/1-settings/1-settings.scss'),
+                        path.join(paths.appSrc, '/styles/2-tools/2-tools.scss'),
                       ],
                     },
                   },
