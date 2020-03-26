@@ -1,5 +1,4 @@
-@import './1-settings/1-settings.scss';
-@import './2-tools/2-tools.scss';
+// First two layers are loaded by 'sass-resources-loader'
 @import './3-generic/3-generic.scss';
 @import './4-elements/4-elements.scss';
 @import './5-objects/5-objects.scss';
