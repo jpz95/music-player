@@ -23,6 +23,7 @@
         }
 
         &.-header {
+            // TODO rewrite using mixins (?)
             @include screen-xs {
                 display: none;
             }

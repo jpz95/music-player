@@ -20,13 +20,13 @@ const Grid = (props) => {
   };
 
   return (
-    <grid className="grid d-grid gap-sm">
+    <grid className="grid d-grid align--center gap-sm">
 
       <row className="grid__row -header">
         { renderHeaderCells() }
       </row>
 
-      <section className="d-grid gap-md">
+      <section className="d-grid align--center gap-md">
         {data.map(item => (
           // TODO handle for mobile view
           <GridRow key={`${item.id}`}
