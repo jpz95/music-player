@@ -1,20 +1,24 @@
+// TODO move to grid module
 .d-grid {
-    display: grid;
-    align-items: center;
-
-    &__flow--column {
-        grid-auto-flow: column;
-    }
+  display: grid;
 }
 
+// TODO move to some flexbox module??
+// TODO think about naming (how it can pollute global namespace)
+.flow--column {
+  grid-auto-flow: column;
+  flex-direction: column;
+}
+
+// TODO move to grid module
 .gap-sm {
-    gap: 0.24rem;
+  gap: 0.24rem;
 }
 
 .gap-md {
-    gap: 0.52rem;
+  gap: 0.52rem;
 }
 
 .gap-lg {
-    gap: 1rem;
+  gap: 1rem;
 }
