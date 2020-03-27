@@ -18,6 +18,7 @@
       &-#{$col-number}--#{$size} {
         // TODO is 'flex: 0 0 column-size($col-number)' better?
         flex: column-size($col-number);
+        max-width: column-size($col-number);
         display: unset;
       }
     }
@@ -40,6 +41,7 @@
     &-#{$col-number} {
       // TODO is 'flex: 0 0 column-size($col-number)' better?
       flex: column-size($col-number);
+      max-width: column-size($col-number);
     }
   }
 
