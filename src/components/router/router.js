@@ -11,13 +11,13 @@ import PlaylistView from 'features/playlist-view/playlist-view';
 
 const Router = () => {
   return (
-    <div className="app">
+    <div className="app d-grid">
 
-      <header className="app__header">
+      <header className="app__header d-flex justify--start p-a--sm">
         <SearchBar></SearchBar>
       </header>
 
-      <main className="app__content">
+      <main className="app__content p-a--sm">
         <BrowserRouter>
           <Switch>
             <Route exact path="/">

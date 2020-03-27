@@ -1,23 +1,7 @@
 .app {
-    // TODO use utility classes for some of these
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: 1fr;
-    min-height: 100vh;
-    background-color: $color-gray-dark;
-    color: $color-font-light;
-
-  &__header {
-    // TODO use/create utility classes for some of these
-    display: grid;
-    grid-auto-flow: column;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-    gap: 4px;
-  }
-
-  &__content {
-    padding: 8px;
-  }
+  // TODO move to 'routes' since app doesn't exist.
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+  background-color: $color-gray-dark;
+  color: $color-font-light;
 }
