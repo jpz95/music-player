@@ -1,0 +1,34 @@
+.spacing {
+  @mixin spacing($spacing, $isColumnFlow) {
+    $end: "margin-right";
+    @if ($isColumnFlow) {
+      $end: "margin-bottom";
+    }
+
+    & > * {
+      margin: 0;
+      #{$end}: $spacing;
+
+      &:last-child {
+        #{$end}: 0;
+      }
+    }
+  }
+
+  @mixin generate-spacing($size, $spacing) {
+    &.spacing-#{$size} {
+      // Creates spacing between row items
+      @include spacing($spacing, false);
+
+      // Creates spacing between column items
+      &.flow--column {
+        @include spacing($spacing, true);
+      }
+    }
+  }
+
+  // ex. `.spacing.spacing-sm > * { ... }`
+  @each $size, $spacing in $spacing-size-map {
+    @include generate-spacing($size, $spacing);
+  }
+}
