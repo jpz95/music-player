@@ -140,6 +140,7 @@
   "devDependencies": {
     "firebase": "^7.11.0",
     "normalize.css": "^8.0.1",
+    "prettier": "^2.0.2",
     "react-firebase-hooks": "^2.1.1",
     "sass": "^1.26.3"
   },
