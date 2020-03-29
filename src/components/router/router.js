@@ -14,7 +14,7 @@ const Router = () => {
     <div className="app d-grid">
 
       <header className="app__header d-flex justify--start p-a--sm">
-        <SearchBar></SearchBar>
+        <SearchBar />
       </header>
 
       <main className="app__content p-a--sm">

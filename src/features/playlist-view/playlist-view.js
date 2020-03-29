@@ -7,7 +7,7 @@ import './playlist-view.scss';
 import { firestore } from 'base.js';
 
 const PlaylistView = (props) => {
-  const { playlistName } = props;
+  const { playlistName = "greatest_playlist" } = props;
 
   const [playlistData = {}, ] = useDocumentData(
     firestore
