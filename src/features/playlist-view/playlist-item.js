@@ -16,7 +16,7 @@ const PlaylistItem = (props) => {
         noWrap
         align--center"
     >
-      <div className="col-11 col-10--md">
+      <div className="col-12--xs col-11--md">
         <span>{song}</span>
 
         <small className="d-flex align--center">
