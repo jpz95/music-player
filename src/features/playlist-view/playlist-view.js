@@ -26,7 +26,7 @@ const PlaylistView = (props) => {
 
   return (
     <article className="playlistView">
-      <header className="playlistView__header p-a--sm">{playlistData.name}</header>
+      <header className="playlistView__header p-a-2">{playlistData.name}</header>
       <Playlist songs={playlistSongs || []}></Playlist>
     </article>
   );

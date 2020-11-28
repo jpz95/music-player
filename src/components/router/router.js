@@ -13,11 +13,11 @@ const Router = () => {
   return (
     <div className="app d-grid">
 
-      <header className="app__header d-flex justify--start p-a--sm">
+      <header className="app__header d-flex justify--start p-a-2">
         <SearchBar />
       </header>
 
-      <main className="app__content p-a--sm">
+      <main className="app__content p-a-2">
         <BrowserRouter>
           <Switch>
             <Route exact path="/">

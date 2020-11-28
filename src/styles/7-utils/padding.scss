@@ -1,26 +1,31 @@
 
 
 .p {
-  $directions: (
+  $direction-map: (
     "t": [padding-top],
     "b": [padding-bottom],
     "l": [padding-left],
     "r": [padding-right],
     "tb": [padding-top padding-bottom],
     "lr": [padding-left padding-right],
-    "a": [padding-top padding-right padding-bottom padding-left],
+    "a": [padding],
   );
 
   @mixin generate-padding($direction, $size, $property-list, $value) {
-    // ex. `.p-lr--xs { padding-left: $spacing-xs; padding-right: $spacing-xs; }`
-    &-#{$direction}--#{$size} {
+    /**
+     * ex. `.p-lr-5 {
+        padding-left: map.get($spacing-size-map, 5);
+        padding-right: map.get($spacing-size-map, 5);
+      }`
+     */
+    &-#{$direction}-#{$size} {
       @each $property in $property-list {
         #{$property}: $value
       }
     }
   }
 
-  @each $direction, $property-list in $directions {
+  @each $direction, $property-list in $direction-map {
     @each $size, $value in $spacing-size-map {
       @include generate-padding($direction, $size, $property-list, $value);
     }

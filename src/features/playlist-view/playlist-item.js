@@ -21,7 +21,7 @@ const PlaylistItem = (props) => {
 
         <small className="d-flex align--center">
           <span>{artist}</span>
-          <strong className="p-lr--sm">&#8226;</strong>
+          <strong className="p-lr-1.5">&#8226;</strong>
           <span>{album}</span>
         </small>
       </div>

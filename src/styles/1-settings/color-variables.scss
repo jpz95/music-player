@@ -22,21 +22,3 @@ $color-gray-light: #6d6d6d;
 $color-transparent: rgba(0,0,0,0);
 
 $color-font-light: #eeeeee;
-
-$font-size: calc(1rem + 2vmin);
-$font-size-sm: calc(1em - 0.30em);
-
-// TOOO finalize sizes
-$spacing-xs: 0.2em;
-$spacing-sm: 0.4em;
-$spacing-md: 0.8em;
-$spacing-lg: 1.2em;
-$spacing-xl: 1.6em;
-
-$spacing-size-map: (
-  "xs": $spacing-xs,
-  "sm": $spacing-sm,
-  "md": $spacing-md,
-  "lg": $spacing-lg,
-  "xl": $spacing-xl,
-);
