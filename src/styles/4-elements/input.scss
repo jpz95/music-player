@@ -1,6 +1,8 @@
+@use 'sass:map';
+
 input {
     font-size: 0.6em;
-    padding: 2px 4px;
+    padding: $spacing-1 $spacing-2;
     border-radius: 2px;
     border-width: 1px;
     border-color: #fff;
@@ -10,7 +12,7 @@ input {
 // TODO move to form.scss
 button {
     font-size: 0.6em;
-    padding: $spacing-xs $spacing-sm;
+    padding: $spacing-2 $spacing-3;
     border-radius: 2px;
     border: 1px solid $color-transparent;
     color: $color-font-light;

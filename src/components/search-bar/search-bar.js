@@ -13,7 +13,7 @@ const SearchBar = (props) => {
     setFocus(false);
   };
 
-  const searchBarClasses = "searchBar d-flex p-a-1"
+  const searchBarClasses = "searchBar d-flex p-a-3"
     + `${isFocused ? " focus" : ""}`;
 
   return (

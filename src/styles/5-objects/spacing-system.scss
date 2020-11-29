@@ -28,7 +28,7 @@
   }
 
   // ex. `.spacing.spacing-sm > * { ... }`
-  @each $size, $spacing in $spacing-size-map {
+  @each $size, $spacing in $spacing-map {
     @include generate-spacing($size, $spacing);
   }
 }
