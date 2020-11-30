@@ -1,0 +1,34 @@
+@use './spacing-utils' as spacing;
+
+.p {
+  $direction-map: (
+    't': ( 'padding-top': 'given' ),
+    'b': ( 'padding-bottom': 'given' ),
+    'l': ( 'padding-left': 'given' ),
+    'r': ( 'padding-right': 'given' ),
+    'x': (
+      'padding-right': 'given',
+      'padding-left': 'given',
+    ),
+    'y': (
+      'padding-top': 'given',
+      'padding-bottom': 'given',
+    ),
+    'a': ( 'padding': 'given' ),
+  );
+
+  @each $direction, $property-map in $direction-map {
+    @each $size, $value in $spacing-map {
+      /**
+        ex. for creating horizontal padding with spacing 5
+        `.p-x-5 {
+          padding-left: $spacing-5;
+          padding-right: $spacing-5;
+        }`
+       */
+      &-#{$direction}-#{$size} {
+        @include spacing.generate-spacing($property-map, $value);
+      }
+    }
+  }
+}

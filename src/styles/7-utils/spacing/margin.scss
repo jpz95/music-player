@@ -1,0 +1,34 @@
+@use './spacing-utils' as spacing;
+
+.m {
+  $direction-map: (
+    't': ( 'margin-top': 'given' ),
+    'b': ( 'margin-bottom': 'given' ),
+    'l': ( 'margin-left': 'given' ),
+    'r': ( 'margin-right': 'given' ),
+    'x': (
+      'margin-right': 'given',
+      'margin-left': 'given',
+    ),
+    'y': (
+      'margin-top': 'given',
+      'margin-bottom': 'given',
+    ),
+    'a': ( 'margin': 'given' ),
+  );
+
+  @each $direction, $property-map in $direction-map {
+    @each $size, $value in $spacing-map {
+      /**
+        ex. for creating horizontal margin with spacing 5
+        `.p-x-5 {
+          margin-left: $spacing-5;
+          margin-right: $spacing-5;
+        }`
+       */
+      &-#{$direction}-#{$size} {
+        @include spacing.generate-spacing($property-map, $value);
+      }
+    }
+  }
+}

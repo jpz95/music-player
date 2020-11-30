@@ -1,0 +1,12 @@
+@function get-property-value($type, $value) {
+  @if $type == zero {
+    @return 0;
+  }
+  @return $value;
+}
+
+@mixin generate-spacing($property-map, $value) {
+  @each $property, $type in $property-map {
+    #{$property}: get-property-value($type, $value);
+  }
+}

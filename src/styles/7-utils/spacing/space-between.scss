@@ -1,0 +1,31 @@
+@use './spacing-utils' as spacing;
+
+.space {
+  $direction-map: (
+    "x": (
+      "margin-left": 'given',
+      "margin-right": 'zero',
+    ),
+    "y": (
+      "margin-top": 'given',
+      "margin-bottom": 'zero',
+    ),
+  );
+
+  @each $direction, $property-map in $direction-map {
+    @each $size, $value in $spacing-map {
+      /**
+        ex. for creating horizontal spacing between children with spacing 5
+        `.space-x-5 > * + * {
+          margin-left: $spacing-5;
+          margin-right: 0;
+        }`
+       */
+      &-#{$direction}-#{$size} {
+        & > * + * {
+          @include spacing.generate-spacing($property-map, $value);
+        }
+      }
+    }
+  }
+}
