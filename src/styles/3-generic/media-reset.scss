@@ -1,0 +1,12 @@
+// Avoid unexpected alignment issues with `display: inline`.
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
